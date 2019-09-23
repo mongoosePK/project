@@ -1,0 +1,21 @@
+Let's make some user stories!
+
+First Batch -- First Iteration
+
+1) I am a User who can view a site (mockup local site fine at this stage.)
+# means we will have to select a framework and webserver
+# I'm thinking Django and Nginx
+
+
+# 2) As a user I can log in to the site
+# Josh -> I feel like this should be a later iteration and not a main priority for this story
+# account authentication confirmation Email
+
+2) I am a user who can enter and view my movie preferences.
+3) I can search for a movie by categories
+4) Clicking on one of the movies that matches my search brings me to a page that lists details about the movie
+3) The site will reference IMDB for recent movies matching User Criteria
+
+Second Batch ? -- Under Development
+
+4) The Site will email User with movie matches
