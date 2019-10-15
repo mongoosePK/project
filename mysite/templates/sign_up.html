@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Welcome to the Movie Recommender</h1>
+  <p>Welcome to the Movie Recomender, a website developed by <em>Team 1</em>!</p>
+  <h2>Sign-Up!</h2>
+  <p>We need this information to create your user account:</p>
+  
+  <form class="site-form" action="/users/sign-up/" method="POST">{% csrf_token %}
+    {{form}}
+      <input type="submit" value="submit">
+  </form>
+  
+{% endblock %}
