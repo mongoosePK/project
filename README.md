@@ -1,5 +1,5 @@
 ## current & active domain URLs
-1. okay so right now the main active url is 127.0.0.1:8000/users/login. there should be a sign up feature on which you can make your own account and login, but it doesn't do much right now. Soon need to make a relational DB to associate user profile information. 
+1. okay so right now the main active url is 127.0.0.1:8000/users and 127.0.0.1:8000/accounts/login. there should be a sign up feature on which you can make your own account and login, but it doesn't do much right now. Soon need to make a relational DB to associate user profile information. 
 
 ## Cloning Project
 1. Move to the folder you want to clone project into
