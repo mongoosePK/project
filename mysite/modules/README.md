@@ -1,6 +1,9 @@
+
 # IMDb Requests and Methods
-<br/>
-#### Movie Request<br />
+<br />
+
+#### Movie Request
+
 | Constructor                 |  Parameters       | Description                         |
 |-----------------------------|:-----------------:|:------------------------------------|
 | MovieRequest()              |  title = "" <br />year = None     | No title is sent<br/>Any year is selected for movie                |
@@ -8,6 +11,8 @@
 | MovieRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]   |
 <br/>
 ###### Movie Request Methods
+<br />
+
  + Before request
  
 | Method                  | Parameters             | Description                    |
@@ -16,7 +21,8 @@
 | setSearchType([type]) | movie[default],<br/> series, episode | Searches IMDb titles that are a [type]
 | setYear([Year]) | year = [Year]   | Limits IMDb search to the year [Year] |
 | setMovieId([ID])      | Valid IMDb Movie ID        | Search IMDb database for motion picture <br/>film with id = [ID]|
-| setPlotType([type]) | short, full(default) | Returns a plot description that is either <br/>short[short] or long[full] |<br/>
+| setPlotType([type]) | short, full(default) | Returns a plot description that is either <br/>short[short] or long[full] |
+<br/>
  
 + After request
 
@@ -41,8 +47,8 @@
 | SearchRequest([Name])        |  title = [Name]<br/>year = None     | Searches for movie titled [Name]<br/>Searches for [Name] from any year    |
 | SearchRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]    |
 <br/>
-+ Before request
 
++ Before request
 
  | Method                | Parameters            | Description                   |
  |--------------------------|:---------------------------:|:----------------------------------|
@@ -51,8 +57,8 @@
 | setYear([Year]) | year = [Year]   | Limits IMDb search to the year [Year] |
 | setPageNum([Number]) | [1-100]            | Returns a list of motion pictures from page <br/>[Number] that fulfill search requirements |
 <br/>
-+ After request
 
++ After request
 
  | Method               | Description              |
  |--------------------------|------------------------------|
