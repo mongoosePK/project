@@ -10,9 +10,8 @@
 | MovieRequest([Name])        |  title = [Name]<br/>year = None     | Searches for movie titled [Name]<br/>Searches for [Name] from any year   |
 | MovieRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]   |
 <br/>
-###### Movie Request Methods
-<br />
 
+##### Movie Request Methods
  + Before request
  
 | Method                  | Parameters             | Description                    |
@@ -48,6 +47,7 @@
 | SearchRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]    |
 <br/>
 
+##### Search Request Method
 + Before request
 
  | Method                | Parameters            | Description                   |
