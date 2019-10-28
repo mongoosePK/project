@@ -2,7 +2,7 @@
 # IMDb Requests and Methods
 <br />
 
-#### Movie Request
+### Movie Request
 
 | Constructor                 |  Parameters       | Description                         |
 |-----------------------------|:-----------------:|:------------------------------------|
@@ -11,7 +11,7 @@
 | MovieRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]   |
 <br/>
 
-##### Movie Request Methods
+#### Movie Request Methods
  + Before request
  
 | Method                  | Parameters             | Description                    |
@@ -38,7 +38,7 @@
  | getPlot()           | Returns plot of motion picture based on <br/>length specified by setPlotType()
  
 <br/><br/>
-#### Search Request <br/>
+### Search Request <br/>
 
 | Constructor                 |  Parameters       | Description                         |
 |-----------------------------|:-----------------:|:------------------------------------|
@@ -47,7 +47,7 @@
 | SearchRequest([Name],[Year]) |  title = [Name]<br/>year = [Year]     | Searches for movie titled [Name]<br/>Search for [Name] released in [Year]    |
 <br/>
 
-##### Search Request Method
+#### Search Request Methods
 + Before request
 
  | Method                | Parameters            | Description                   |
