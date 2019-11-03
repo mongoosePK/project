@@ -14,7 +14,7 @@
 import sys
 
 # Include module path for python to search
-sys.path.append("../dependencies/")
+sys.path.append("dependencies/")
 
 import requests
 from Queries import MovieQuery, SearchQuery
@@ -69,11 +69,16 @@ class Request:
             return self._queries[movieNum].getYear()
         
     def getPosterURL(self, movieNum=0):
-        print(self)
         if self.__class__.__name__ == "MovieRequest":
             return self._query.getPosterURL()
         else: # Search Request => Requires movie number for return json
             return self._queries[movieNum].getPosterURL()
+
+    def getId(self, movieNum=0):
+        if self.__class__.__name__ == "MovieRequest":
+            return self._query.getId()
+        else: # Search Request => Requires movie number for return json
+            return self._queries[movieNum].getId()
     def getRated(self):
         return self._query.getRated()
     def getReleaseDate(self):

@@ -12,6 +12,8 @@ class Query:
         return self._json["Year"]
     def getPosterURL(self):
         return self._json["Poster"]
+    def getId(self):
+        return self._json["imdbID"]
 
 
 class MovieQuery(Query):
