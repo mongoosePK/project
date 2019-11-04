@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1> Movie Display </h1>
+  <p>
+    <ul>
+      {% for movie in currUserData %}
+        <li>
+          {{movie.title}}
+            <ul style="list-style-type:square">
+              <li>
+                {{movie.rated}}
+              </li>
+              <li>
+                {{movie.runtime}}
+              </li>
+              <li>
+                {{movie.plot}}
+              </li>
+            </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  <p>
+{% endblock %}
