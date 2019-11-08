@@ -7,7 +7,7 @@ import datetime
 @login_required
 def home(request):
     today = datetime.datetime.now().date()
-    return render(request, "index.html", {"today" : today})
+    return render(request, 'index.html', {'today' : today})
 
 #this will return the sign up page view
 def sign_up(request):
@@ -19,4 +19,7 @@ def sign_up(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, "sign_up.html",{'form':form})
+    return render(request, 'sign_up.html',{'form':form})
+
+def settings(request):
+    return render(request, 'settings.html')
