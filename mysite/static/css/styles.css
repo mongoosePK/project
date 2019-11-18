@@ -1,5 +1,21 @@
 .sidebar-nav {
     margin-top: 20px;
     padding: 0;
-    list-style: none;
+    link-style:none;
+}
+ul > li {
+  margin-bottom:20px;
+}
+a {
+  color:black;
+  position:relative;
+}
+ul > li[class = "link"]:hover{
+  background-color:#6c757d;
+  cursor:pointer;
+  color:white;
+}
+a:hover {
+  text-decoration:none;
+  color:inherit;
 }
