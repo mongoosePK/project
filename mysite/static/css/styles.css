@@ -3,14 +3,17 @@
     padding: 0;
     link-style:none;
 }
-ul > li {
+#searchForm {
+
+}
+ul li {
   margin-bottom:20px;
 }
 a {
   color:black;
   position:relative;
 }
-ul > li[class = "link"]:hover{
+ul li[class = "link"]:hover,ul > a:hover{
   background-color:#6c757d;
   cursor:pointer;
   color:white;
