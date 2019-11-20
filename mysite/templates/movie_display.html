@@ -7,7 +7,7 @@
       <thead class="thead-dark">
         <tr>
           <th>
-            Year
+            Title
           </th>
           <th>
             Released
@@ -27,24 +27,24 @@
       {% for movie in searchResult %}
         <tr>
             <td>
-              {{movie.Title}}
+              {{movie.title}}
             </td>
             <td>
-              {{movie.Year}}
+              {{movie.year}}
             </td>
             <td>
-              {{movie.Rated}}
+              {{movie.rated}}
             </td>
             <td>
-              {{movie.Released}}
+              {{movie.released}}
             </td>
             <td>
-              {{movie.Genre}}
+              {{movie.genre}}
             </td>
         </tr>
         <tr>
           <td class="w-50">
-            {{movie.Plot}}
+            {{movie.plot}}
           </td>
         </tr>
       {% endfor %}
