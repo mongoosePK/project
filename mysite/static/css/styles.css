@@ -3,22 +3,23 @@
     padding: 0;
     link-style:none;
 }
-#searchForm {
-
-}
 ul li {
   margin-bottom:20px;
 }
-a {
+ul > a {
   color:black;
   position:relative;
 }
-ul li[class = "link"]:hover,ul > a:hover{
+[class = "link"]:hover,ul > a:hover{
   background-color:#6c757d;
   cursor:pointer;
   color:white;
 }
-a:hover {
+ul a:hover {
   text-decoration:none;
   color:inherit;
+}
+.add-btn:hover {
+  color:red;
+  cursor:pointer;
 }
