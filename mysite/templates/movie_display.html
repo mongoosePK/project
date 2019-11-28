@@ -27,7 +27,7 @@
       {% for movie in searchResult %}
         <tr>
             <td>
-              <span onclick="alert('{{movie.title}}')" class="fas fa-plus-circle add-btn"></span>  {{movie.title}}
+              <span onclick="handleSave('{{movie.id}}')" id="{{movie.id}}" class="fas fa-plus-circle add-btn"></span>  {{movie.title}}
             </td>
             <td>
               {{movie.year}}
