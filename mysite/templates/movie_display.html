@@ -2,7 +2,9 @@
 
 {% block content %}
   <h1 class="display-5"> Titles related to "{{ userSearch }}" </h1>
-  <button class="btn btn-primary" onclick="loadMovies()">Save</button>
+  <form action="" method="post">{% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Save" onmousedown="loadMovies()">
+  </form>
   <p>
     <table class="table table-striped mr-sm-3">
       <thead class="thead-dark">
