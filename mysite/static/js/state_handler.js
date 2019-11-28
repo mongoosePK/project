@@ -4,9 +4,10 @@
 */
 let savedMovies = {};
 function loadMovies() {
-  for (let m in savedMovies) {
-    
-  }
+  sessionStorage.clear();
+  sessionStorage.setItem("savedMovies", JSON.stringify(savedMovies));
+  // To retrieve session storage data parse json:
+  //let testData = JSON.parse(sessionStorage.getItem("savedMovies"));
 }
 function handleLoadEvent() {
   //const newEvent = new Event("build");
