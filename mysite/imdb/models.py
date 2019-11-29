@@ -26,7 +26,8 @@ class MovieModel:
                 "rated":currRequest.getRated(),
                 "released":currRequest.getReleaseDate(),
                 "runtime":currRequest.getRuntime(),
-                 "plot":currRequest.getPlot()
+                "plot":currRequest.getPlot(),
+                "id":currRequest.getId()
             }
             self._movies.append(currObj)
 
