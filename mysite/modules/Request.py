@@ -2,19 +2,8 @@
     The RequestHandler clsss handles the requests sent to it
     and stores data in the Request class
 
-    To include in a project, must added folder/module
-    to module path for python to search
-    [
-        ie.
-        import sys
-        sys.path.append("relative path")
-    ]
-'''
-# imports
-import sys
+ '''
 
-# Include module path for python to search
-sys.path.append("dependencies/")
 
 import requests
 from Queries import MovieQuery, SearchQuery

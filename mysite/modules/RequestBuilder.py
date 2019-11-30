@@ -5,9 +5,9 @@
 
 import Request
 class SearchRequest(Request.RequestHandler):
-    def __init__(self, title = "", year = None):
+    def __init__(self, title = ""):
         # Call to parent class
-        super().__init__(title, year)
+        super().__init__(title)
         
         # Which page to return out of 100
         self._page_num = 1 # Default page: 1, max: 100
@@ -29,8 +29,6 @@ class SearchRequest(Request.RequestHandler):
     def _build_search_url(self):
         if self._title != "":
             self.url = "%s&s=%s" % (self.url, self._title)
-        if self._year != None:
-            self.url = "%s&y=%d" % (self.url, self._year)
         if self._search_type != "":
             #append search type to each url
             self.url = "%s&type=%s" % (self.url, self._search_type)
@@ -39,9 +37,9 @@ class SearchRequest(Request.RequestHandler):
         self.url = "%s&page=%d" % (self.url, self._page_num)
         
 class MovieRequest(Request.RequestHandler):
-    def __init__(self, title = "", year = None):
+    def __init__(self, title = ""):
         # Call to parent class
-        super().__init__(title, year)
+        super().__init__(title)
         
         self._movieID = ""
         self._plot_type = ""
@@ -70,21 +68,8 @@ class MovieRequest(Request.RequestHandler):
             self.url = "%s&t=*%s" % (self.url, self._title)
         if self._movieID != "":
             self.url = "%s&i=%s" % (self.url, self._movieID)
-        if self._year != None:
-            self.url = "%s&y=%d" % (self.url, self._year)
-        if self._search_type != "":
-            self.url = "%s&type=%s" % (self.url, self._search_type)
         if self._plot_type != "":
             self.url = "%s&plot=%s" % (self.url, self._plot_type)
 
         print(self.url)
         
-
-if __name__ == "__main__":
-    searchReq = SearchRequest("Guardians")
-    searchReq.makeRequest()
-
-    for i in range(9):
-        currRequest = MovieRequest()
-        currRequest.setMovieId(searchReq.getId(i))
-        currRequest.makeRequest()
