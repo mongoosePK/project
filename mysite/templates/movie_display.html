@@ -2,11 +2,12 @@
 
 {% block content %}
 <h2>Movies</h2>
-<form action="{% url= 'movies:save' movies.mID %}" method="post">  
+<form id="saveForm" action="/movies/save_movie" method="POST">
+{% csrf_token %}
 {% for movie in movies %}
-    <input type="checkbox" name="selection" id="movies{{ forloop.counter }}" value="{{ movie.mID }}">
+    <input type="checkbox" name="choices" id="{{ movie.mID }}" value="{{ movie.posterURL }}">
     <li>{{ movie.title }}-{{ movie.year }} <img src="{{ movie.posterURL }}"> </li>
 {% endfor %}
-<input type="submit" value="save">
+<input class="btn btn-primary text-center save" type="submit" value="save">
 </form>
 {% endblock %}

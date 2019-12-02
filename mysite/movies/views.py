@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Movie
-from .forms import SearchForm
-from .search import movieRequest
+from .forms import SearchForm, movieRequest
 # Create your views here.
 
 #home view returns the basic search page of the app
@@ -11,7 +10,7 @@ from .search import movieRequest
 @login_required
 def movie_search(request):
     form = SearchForm()
-    context = { "form": form }
+    context = { 'form': form }
     return render(request, "movie_search.html", context)
 
 #display view 
@@ -26,4 +25,14 @@ def movie_display(request):
         # moviesData is a list containing the (usually) 10 Movies
         # returned by a user's search. 
         moviesData = movieRequest(form)
-        return render(request, 'movie_display.html', {'movies': moviesData})
+        context = {'movies': moviesData}
+        return render(request, 'movie_display.html', context)
+    
+def save_movie(request):
+    if request.method == 'POST':
+        result = list()
+        #for value in request.POST.items():
+        result = request.POST.getlist('choices')
+        context = {'art': result}
+        return render(request, 'save_movie.html', context)
+       

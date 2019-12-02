@@ -24,7 +24,7 @@
            <a href="{% url 'home' %}"><li class="link">Home</li></a>
            <a href="{% url 'movie-search' %}"><li class="link">Movie Request</li></a>
            <a href="{% url 'logout'%}?next={{request.path}}"><li class="link">Logout</li></a>
-           <a href="{% url 'settings' %}"><li class="link">Settings</li></a>
+           <a href="{% url 'save-movie' %}"><li class="link">Saves</li></a>
          {% else %}
            <a href="{% url 'login'%}?next={{request.path}}"><li class="link">Login</li></a>
          {% endif %}

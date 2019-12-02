@@ -1,11 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Your Profile and Preferences</h1>
+  <h1>Your Profile and saves</h1>
   <h2>Your Favorite JSON objects</h2>
   <p>Your faves-section has the following records:</p>
   <ul>
-    <li><strong>Date:</strong> {{ today }}</li>
-    
+    {% for movie in art %}
+      <li> <img src="{{ movie }}"> </li>
+    {% endfor %}
   </ul>
 {% endblock %}

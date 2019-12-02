@@ -1,10 +1,9 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<div class="intro">
- <h1 class="text-center">Moviebook</h1>
- <p class="text-center">like a rolodex, but digital.</p>
-</div>
+<h1>MovieBook</h1>
+<p>It's like a rolodex <em>but without paper</em>!</p>
+<h2>We store your tastes, like a refrigerator for movies!</h2>
 <div class="search-field">
  <form id="searchForm" action="/movies/movie_display" class="form-inline">
      {{ form.query }}
