@@ -1,12 +1,16 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <form action="/imdb/movie_display" id="searchForm" method="GET">
-    <div class="form-group">
-      <input type="text" name="searchVal" maxLength=10/><br /><br />
-      <input type="submit" value="Submit" class="btn btn-primary"/>
-      <div class="valid-feedback">Valid Input</div>
-      <div class="invalid-feedback">Please enter a search query</div>
-    </div>
-  </form>
+<div class="intro">
+ <h1 class="text-center">Moviebook</h1>
+ <p class="text-center">like a rolodex, but digital.</p>
+</div>
+<div class="search-field">
+ <form id="searchForm" action="/movies/movie_display" class="form-inline">
+     {{ form.query }}
+     <div style="display: inline-flex;">
+         <input class="btn btn-primary text-center search"type="submit" value="SEARCH" name="">
+     </div>
+ </form>
+</div>
 {% endblock %}
