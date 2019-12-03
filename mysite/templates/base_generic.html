@@ -9,8 +9,9 @@
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script type="text/javascript" src="{% static 'js/state_handler.js' %}"></script>
 </head>
-<body>
+<body onload="handleLoadEvent()">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-2">
