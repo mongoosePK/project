@@ -29,10 +29,14 @@ def movie_display(request):
         return render(request, 'movie_display.html', context)
     
 def save_movie(request):
+    result = list()
+
     if request.method == 'POST':
-        result = list()
-        #for value in request.POST.items():
         result = request.POST.getlist('choices')
-        context = {'art': result}
-        return render(request, 'save_movie.html', context)
-       
+
+    else:
+        for movie in Movie.objects.all():
+            result.append(movie.posterURL)
+
+    context = {'art': result}
+    return render(request, 'save_movie.html', context)
